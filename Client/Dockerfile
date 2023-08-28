@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM debian
 RUN apt update -y && apt install -y batctl net-tools wireless-tools
 CMD ["bash", "/start-batman-adv.sh"]
 RUN echo 'batman-adv' | tee --append /etc/modules
