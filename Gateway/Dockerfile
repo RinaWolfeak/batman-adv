@@ -1,4 +1,4 @@
-FROM debian
+FROM linux
 RUN apt update -y && apt install -y batctl net-tools wireless-tools dnsmasq
 RUN echo 'batman-adv' | tee --append /etc/modules
 RUN echo 'denyinterfaces wlan0' | tee --append /etc/dhcpcd.conf
